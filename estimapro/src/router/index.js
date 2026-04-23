@@ -3,6 +3,8 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Dashboard from "../views/Dashboard.vue";
 import { auth } from "../firebase/firebase";
+import DashboardView from '../views/DashboardView.vue' /// se agrego esto en sprint 4 dashboard
+
 
 const routes = [
   { path: "/", redirect: "/login" },
@@ -11,7 +13,7 @@ const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    component: Dashboard,
+    component: DashboardView,
     meta: { requiresAuth: true },
   },
 ];
